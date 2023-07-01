@@ -3,7 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv').config();
 const sequelize = require('./database/db');
 const User = require("./models/user");
-const { authRouter } = require("./routes");
+const { userRouter, authRouter } = require("./routes");
 
 const { EXPRESS_PORT } = require('./config/config');
 
@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 router.use("/auth", authRouter);
+router.use("/users", userRouter);
 
 app.use(router);
 
