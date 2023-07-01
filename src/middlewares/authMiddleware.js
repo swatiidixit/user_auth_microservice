@@ -10,7 +10,7 @@ const verifyToken = (req, res, next) => {
     }
     const token_split = token.split(" ");
     
-    token = token_split[0] !== "bearer" ? token_split[0] : token_split[1];
+    token = token_split[0] !== "Bearer" ? token_split[0] : token_split[1];
 
     jwt.verify(token, SECRET_KEY, (error, user) => {
       if (error) {
