@@ -6,5 +6,7 @@ const {authController} = require("../controllers");
 
 authRouter.post('/signup', authValidator.validateUser, authController.signup );
 
+authRouter.post("/signin", authValidator.validateLoggedUser, authController.signin)
+
 
 module.exports = authRouter;
