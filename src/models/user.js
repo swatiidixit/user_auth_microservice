@@ -36,11 +36,11 @@ const user = sequelize.define('users', {
 });
 
 
-sequelize.sync().then(() => {
+/*sequelize.sync().then(() => {
   console.log('Users table created successfully!');
 }).catch((error) => {
   console.error('Unable to create table : ', error);
-});
+});*/
 
 
 module.exports = user;

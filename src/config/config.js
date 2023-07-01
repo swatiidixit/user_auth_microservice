@@ -9,3 +9,5 @@ exports.db_config = {
 }
 
 exports.EXPRESS_PORT = process.env.PORT || 5000;
+
+exports.SECRET_KEY = process.env.SECRET_KEY;
